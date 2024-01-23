@@ -1,0 +1,14 @@
+<h1>Login</h1>
+<div class="container">
+   <div class="alert alert-warning" *ngIf="invalidLogin">{{errorMesssage}}</div>
+   <div>
+      <!-- one-way data binding  -->
+      <!-- Username:   <input type="text" name="username" value="{{username}}">
+Password:   <input type="text" name="password" value="{{password}}"> -->
+      <!-- Username:   <input type="text" name="username" [value]="username">
+Password:   <input type="text" name="password" [value]="password"> -->
+      Username: <input type="text" name="username" [(ngModel)]="username">
+      Password: <input type="text" name="password" [(ngModel)]="password">
+      <button class="btn btn-success" (click)=handleLogin()>login</button>
+   </div>
+</div>
